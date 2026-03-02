@@ -1,42 +1,5 @@
-const GameBoard = (function () {
-  const board = [null, null, null, null, null, null, null, null, null];
-
-  const getBoard = () => board;
-
-  const setMarker = (position, marker) => {
-    if (board[position] === null) {
-      board[position] = marker;
-      return true;
-    } else {
-      return false;
-    }
-  };
-
-  const resettBoard = () => {
-    for (let i = 0; i < board.length; i++) {
-      board[i] = null;
-    }
-  };
-
-  return {
-    getBoard,
-    setMarker,
-    resettBoard,
-  };
-})();
-
-function Player(name, marker) {
-  let score = 0;
-
-  const getScore = () => score;
-  const setPoints = () => score++;
-  return {
-    name,
-    marker,
-    getScore,
-    setPoints,
-  };
-}
+import { Player } from '../factory/Player.js';
+import { GameBoard } from './Game-Board.js';
 
 const Game = (function () {
   let playerOne;
