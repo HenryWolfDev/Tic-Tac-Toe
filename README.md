@@ -1,5 +1,27 @@
 # Tic-Tac-Toe
 
+### TO DO's:
+
+Module Pattern:
+
+- GameBoard:
+  Zustand: Array mit 9 Feldern
+  Methoden: Feld markieren, Board zurücksetzen, aktuelles Board auslesen
+- DisplayController:
+  Rendert aktuellen Zustand von GameBoard
+  Hängt Event-Listener and die Buttons um das UI zu aktualisieren
+  Zeigt Gewinner-Nachricht, Punktestand an
+- Game:
+  Logik des Spiels
+  Prüft, wer dran ist
+  Checkt Siegbedingungen
+  Steuert Spielablauf
+
+Factory Functions:
+
+- Player:
+  Eigenschaften: Name, Symbol(X oder Y), Score
+
 ### Phase 1: Setup & Grundstruktur
 
     Repository erstellen: HTML/CSS/JS-Dateien anlegen und Git initialisieren.
