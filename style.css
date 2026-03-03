@@ -34,15 +34,15 @@ main {
   align-items: center;
 }
 
-.hide {
+.hidden {
   display: none;
 }
 
-.gameboard-section {
+#gameboard-section {
   height: 100%;
 }
 
-.main-menu-section {
+#main-menu-section {
   height: 100%;
 
   h2 {
@@ -65,10 +65,12 @@ main {
         }
 
         input {
+          margin-top: auto;
           padding-left: 1rem;
           height: 100%;
-          font-size: 2rem;
-          color: rgb(232, 232, 233);
+          font-size: 4rem;
+
+          color: rgb(96, 96, 187);
           background-color: rgb(20, 20, 20);
           border-bottom: 0.1rem solid whitesmoke;
         }
@@ -78,7 +80,6 @@ main {
     button {
       padding: 1rem 1.5rem;
       font-size: 3rem;
-      font-weight: bold;
       font-family: 'Jersey 10', sans-serif;
       background-color: antiquewhite;
       color: rgb(20, 20, 20);
@@ -86,7 +87,8 @@ main {
       cursor: pointer;
 
       &:hover {
-        background-color: rgb(196, 165, 124);
+        color: rgb(232, 232, 233);
+        background-color: rgb(52, 125, 167);
       }
     }
   }
