@@ -38,6 +38,21 @@ main {
   display: none;
 }
 
+button {
+  padding: 1rem 1.5rem;
+  font-size: 3rem;
+  font-family: 'Jersey 10', sans-serif;
+  background-color: antiquewhite;
+  color: rgb(20, 20, 20);
+
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(232, 232, 233);
+    background-color: rgb(52, 125, 167);
+  }
+}
+
 #gameboard-section {
   height: 100%;
 }
@@ -76,21 +91,6 @@ main {
         }
       }
     }
-
-    button {
-      padding: 1rem 1.5rem;
-      font-size: 3rem;
-      font-family: 'Jersey 10', sans-serif;
-      background-color: antiquewhite;
-      color: rgb(20, 20, 20);
-
-      cursor: pointer;
-
-      &:hover {
-        color: rgb(232, 232, 233);
-        background-color: rgb(52, 125, 167);
-      }
-    }
   }
 }
 
@@ -100,7 +100,11 @@ main {
   justify-content: center;
   gap: 2rem;
 
-  .players-info {
+  #message-display {
+    font-size: 4rem;
+  }
+
+  #player-displayer {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -114,7 +118,10 @@ main {
       align-items: center;
       justify-content: center;
       gap: 2rem;
-      color: rgb(52, 125, 167);
+
+      .player-name {
+        color: rgb(52, 125, 167);
+      }
     }
   }
 }

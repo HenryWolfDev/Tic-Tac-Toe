@@ -26,6 +26,13 @@ export const Game = (function () {
     activePlayer = playerOne;
   };
 
+  const getScores = () => {
+    return {
+      playerOne: playerOne.getScore(),
+      playerTwo: playerTwo.getScore(),
+    };
+  };
+
   const playTurn = position => {
     if (checkWinning(GameBoard.getBoard()).status !== 'Game is still running') {
       return;
@@ -59,7 +66,9 @@ export const Game = (function () {
     if (winning) {
       return {
         status: 'Win',
+        message: `${activePlayer.name} win!`,
         winner: board[winning[0]],
+        activePlayer: activePlayer,
         scores: {
           playerOne: playerOne.getScore(),
           playerTwo: playerTwo.getScore(),
@@ -69,6 +78,7 @@ export const Game = (function () {
     if (!board.includes(null)) {
       return {
         status: 'Draw',
+        message: `Nobody wins!`,
         winner: null,
         scores: {
           playerOne: playerOne.getScore(),
@@ -78,7 +88,8 @@ export const Game = (function () {
     }
 
     return {
-      status: 'Game is still running',
+      status: `Game is still running`,
+      message: `It is your turn: ${activePlayer.name}`,
       winner: null,
       scores: {
         playerOne: playerOne.getScore(),
@@ -96,5 +107,6 @@ export const Game = (function () {
     init,
     playTurn,
     resettGame,
+    getScores,
   };
 })();

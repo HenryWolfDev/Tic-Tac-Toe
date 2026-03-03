@@ -49,7 +49,20 @@
         </form>
       </section>
       <section id="gameboard-section" class="hidden">
+        <span id="message-display"></span>
+
         <div id="game-board"></div>
+        <div id="player-displayer">
+          <div class="player-name-score">
+            <span class="player-name" id="player-name-one"></span>
+            <span id="player-score-one"></span>
+          </div>
+          <div class="player-name-score">
+            <span class="player-name" id="player-name-two"></span>
+            <span id="player-score-two"></span>
+          </div>
+        </div>
+        <button id="close-game">Back to Menu</button>
       </section>
     </main>
     <script src="/module/Display-Controller.js" type="module"></script>
