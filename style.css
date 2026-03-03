@@ -2,10 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  border-style: none;
+  letter-spacing: 0.2rem;
 }
 
 html {
   font-size: 62.5%;
+  font-family: 'Jersey 10', sans-serif;
+  color: rgb(232, 232, 233);
 }
 
 .container {
@@ -15,11 +19,77 @@ html {
   margin: 0 auto;
 }
 
-.gameboard-section {
+body {
+  background-color: rgb(20, 20, 20);
+}
+
+main {
   height: 100%;
+}
+
+.d-flex-col-c-c {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+.gameboard-section {
+  height: 100%;
+}
+
+.main-menu-section {
+  height: 100%;
+
+  h2 {
+    font-size: 12rem;
+  }
+
+  form {
+    gap: 2rem;
+
+    fieldset {
+      gap: 2rem;
+
+      .player-input {
+        font-size: 4rem;
+        display: flex;
+
+        label {
+          color: rgb(156, 207, 169);
+          border-bottom: 0.1rem solid whitesmoke;
+        }
+
+        input {
+          padding-left: 1rem;
+          height: 100%;
+          font-size: 2rem;
+          color: rgb(232, 232, 233);
+          background-color: rgb(20, 20, 20);
+          border-bottom: 0.1rem solid whitesmoke;
+        }
+      }
+    }
+
+    button {
+      padding: 1rem 1.5rem;
+      font-size: 3rem;
+      font-weight: bold;
+      font-family: 'Jersey 10', sans-serif;
+      background-color: antiquewhite;
+      color: rgb(20, 20, 20);
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(196, 165, 124);
+      }
+    }
+  }
 }
 
 #game-board {

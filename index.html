@@ -3,12 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
     <title>Tic Tac Toe</title>
   </head>
-  <body>
-    <main class="container">
-      <section class="gameboard-section">
+  <body class="container">
+    <main>
+      <section class="main-menu-section d-flex-col-c-c">
+        <h2>Tic Tac Toe</h2>
+        <form class="d-flex-col-c-c">
+          <fieldset class="d-flex-col-c-c">
+            <div class="player-input">
+              <label for="player-one">X Player: </label>
+              <input
+                type="text"
+                placeholder="Please enter name"
+                id="player-one-name"
+                name="player-one"
+                maxlength="18"
+                required
+              />
+            </div>
+            <div class="player-input">
+              <label for="player-two">Y Player: </label>
+              <input
+                type="text"
+                placeholder="Please enter name"
+                id="player-two-name"
+                name="player-two"
+                maxlength="18"
+                required
+              />
+            </div>
+          </fieldset>
+          <div>
+            <button type="submit">Start Game</button>
+          </div>
+        </form>
+      </section>
+      <section class="gameboard-section hide">
         <div id="game-board"></div>
       </section>
     </main>

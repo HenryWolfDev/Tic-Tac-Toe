@@ -1,16 +1,10 @@
 import { Player } from '../factory/Player.js';
 import { GameBoard } from './Game-Board.js';
 
-const Game = (function () {
+export const Game = (function () {
   let playerOne;
   let playerTwo;
   let activePlayer;
-
-  const init = (PlayerNameOne, PlayerNameTwo) => {
-    playerOne = Player(PlayerNameOne, 'X');
-    playerTwo = Player(PlayerNameTwo, 'O');
-    activePlayer = playerOne;
-  };
 
   const winConditions = [
     // Horizontal
@@ -25,6 +19,12 @@ const Game = (function () {
     [2, 4, 6],
     [0, 4, 8],
   ];
+
+  const init = (PlayerNameOne, PlayerNameTwo) => {
+    playerOne = Player(PlayerNameOne, 'X');
+    playerTwo = Player(PlayerNameTwo, 'O');
+    activePlayer = playerOne;
+  };
 
   const playTurn = position => {
     if (checkWinning(GameBoard.getBoard()).status !== 'Game is still running') {
